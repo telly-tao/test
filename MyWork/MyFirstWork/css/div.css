@@ -1,0 +1,377 @@
+.body{margin: auto; width: 1000px;height:auto;border-color: black; border-style: solid;border-width:1px;}
+/*******head style************/
+.head{
+	position: relative;
+	width: 1000px;
+	height: 110px;
+	background-image: url(../img/head-bg.jpg);
+}
+.logo{
+	position: absolute;
+	width: 155px;
+	height: 37px;
+	font-size: 30px;
+	color: white;
+	margin-top: 35px;
+	margin-left: 50px;
+	background: url(../img/logo.png) no-repeat center center;
+}
+.menu{
+	position: absolute;
+	margin-top: 45px;
+	margin-left: 180px;
+}
+.ul1 li{
+	margin-left: 70px;
+	list-style: none ;
+	float: left;
+}
+.ul1 li a{
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
+.ul1 li a:hover{
+	font-size: 20px;
+	color: white;
+	text-decoration: underline;
+}
+.langrage{
+	position: absolute;
+	margin-top: 45px;
+	margin-left: 800px;
+}
+.ul2 li,a{
+	font-size: 10px;
+	color: white;
+	list-style: none ;
+	float: left;
+	margin-right: 4px;
+	text-decoration: none;
+}
+.ul2 li,a:hover{
+	font-size: 10px;
+	color: white;
+	list-style: none ;
+	float: left;
+	margin-right: 4px;
+	text-decoration: underline;
+}
+/*******banner style************/
+.banner{
+	position: relative;
+	width: 1000px;
+	height: 545px;
+	background-image: url(../img/banner.jpg);
+}
+.icon{
+	position: absolute;
+	width: 328px;
+	height: 80px;
+	margin-top: 400px;
+	margin-left: 50px;
+	background-image: url(../img/icon-bg.png);
+}
+.icon a{
+	font-size: 23px;
+	margin-top: 22px;
+	margin-left: 45px;
+	text-decoration: none;
+}
+.icon a:hover{
+	font-size: 23px;
+	margin-top: 22px;
+	margin-left: 45px;
+	text-decoration: underline;
+}
+/*******video style************/
+.video{
+	position: relative;
+	width:1000px;
+	height: 200px;
+	top: -20px;
+	background-color:lightgray;
+	
+}
+.vid li{
+	color: #000000;
+	font-size: 10px;
+	text-align: center;
+}
+.vid_1{
+	background: url(../img/video1.png) no-repeat center center;
+	list-style: none;
+	width: 98px;
+	height: 98px;
+	float: left;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+.vid_2{
+	background: url(../img/video2.png) no-repeat center center;
+	list-style: none;
+	width: 98px;
+	height: 98px;
+	float: left;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+.vid_3{
+	background: url(../img/video3.png) no-repeat center center;
+	list-style: none;
+	width: 98px;
+	height: 98px;
+	float: left;
+	margin-left: 100px;
+	margin-top: 20px;
+	
+}
+.vid_4{
+	background: url(../img/video4.png) no-repeat center center;
+	list-style: none;
+	width: 98px;
+	height: 98px;
+	float: left;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+/**
+.v2{
+	width: 98px;
+	height: 98px;
+	float: left;
+	margin-top: 45px;
+	margin-left: 120px;
+	font-size: 10px;
+}
+.v3{
+	width: 98px;
+	height: 98px;
+	float: left;
+	margin-top: 45px;
+	margin-left: 120px;
+	font-size: 10px;
+}
+.v4{
+	width: 98px;
+	height: 98px;
+	float: left;
+	margin-top: 45px;
+	margin-left: 120px;
+	font-size: 10px;
+}
+*/
+/*******other style************/
+.other{
+	position: relative;
+	width: 1000px;
+	height: 800px;
+}
+/*
+.ico{
+	width: 100px;
+	height: 200px;
+	float: left;
+	margin-top: 45px;
+	margin-left: 120px;
+	text-align: center;
+	
+}*/
+.funcs li{
+	color: #000000;
+	text-align: center;
+}
+.funcs li p:hover{
+	color: darkgray;
+	text-align: center;
+}
+.func_0{
+	background: url(../img/ico-1.jpg) no-repeat center center;
+	list-style: none;
+	width: 100px;
+	height: 200px;
+	float: left;
+	margin-left: 100px;
+	
+}
+.func_1{
+	list-style: none;
+	width: 100px;
+	height: 200px;
+	float: left;
+	margin-left: 100px;
+	background: url(../img/ico-2.jpg) no-repeat center center;
+}
+.func_2{
+	list-style: none;
+	width: 100px;
+	height: 200px;
+	float: left;
+
+	margin-left: 100px;
+	background: url(../img/ico-3.jpg) no-repeat center center;
+}
+.func_3{
+	list-style: none;
+	width: 100px;
+	height: 200px;
+	float: left;
+	margin-left: 100px;
+	background: url(../img/ico-3.jpg) no-repeat center center;
+}
+.func_4{
+	list-style: none;
+	width: 100px;
+	height: 200px;
+	float: left;
+	margin-left: 100px;
+	background: url(../img/ico-5.jpg) no-repeat center center;
+}
+.func_5{
+	list-style: none;
+	width: 100px;
+	height: 200px;
+	float: left;
+	margin-left: 100px;
+	background: url(../img/ico-6.jpg) no-repeat center center;
+}
+.func_6{
+	list-style: none;
+	width: 100px;
+	height: 200px;
+	float: left;
+	margin-left: 100px;
+	background: url(../img/ico-7.jpg) no-repeat center center;
+}
+.func_7{
+	list-style: none;
+	width: 100px;
+	height: 200px;
+	float: left;
+	margin-left: 100px;
+	background: url(../img/ico-8.jpg) no-repeat center center;
+}
+
+/**
+.ico2{
+	width: 98px;
+	height: 98px;
+	float: left;
+	margin-top: 45px;
+	margin-left: 120px;
+	font-size: 10px;
+}
+.ico3{
+	width: 88px;
+	height: 88px;
+	float: left;
+	margin-top: 45px;
+	margin-left: 120px;
+	font-size: 10px;
+}
+.ico4{
+	width: 88px;
+	height: 88px;
+	float: left;
+	margin-top: 45px;
+	margin-left: 120px;
+	font-size: 10px;
+}
+.ico5{
+	width: 88px;
+	height: 88px;
+	
+	margin-top: 45px;
+	margin-left: 120px;
+	font-size: 10px;
+}
+.ico6{
+	width:88px;
+	height: 88px;
+	float: left;
+	margin-top: 45px;
+	margin-left: 120px;
+	font-size: 10px;
+}
+.ico7{
+	width: 88px;
+	height: 88px;
+	float: left;
+	margin-top: 45px;
+	margin-left: 120px;
+	font-size: 10px;
+}
+.ico8{
+	width: 88px;
+	height: 88px;
+	float: left;
+	margin-top: 45px;
+	margin-left: 120px;
+	font-size: 10px;
+}
+*/
+.more{
+	width: 206px;
+	height: 29px;
+	float: left;
+	margin-top: 64px;
+	margin-left:400px;
+	font-size: 10px;
+}
+/*******footer style************/
+.footer{
+	position: relative;
+	width: 1000px;
+	height: 330px;
+	background-color: black;
+}
+.foo li{
+	color: white;
+	
+}
+.foo_0{
+	list-style: none;
+	float: left;
+	margin-left: 190px;
+}
+
+.foo_1{
+	list-style: none;
+	float: left;
+	margin-left: 200px;
+}
+.foo_2{
+	list-style: none;
+	float: left;
+	margin-left: 200px;
+}
+.foo_3{
+	list-style: none;
+	float: left;
+	margin-left: 190px;
+}
+.foo_4{
+	list-style: none;
+	float: left;
+	margin-left: 200px;
+}
+.foo_5{
+	list-style: none;
+	float: left;
+	margin-left: 200px;
+}
+.foo_6{
+	list-style: none;
+	float: left;
+	margin-left: 190px;
+}
+.foo_7{
+	list-style: none;
+	float: left;
+	margin-left: 200px;
+}
+.foo_8{
+	list-style: none;
+	float: left;
+	margin-left: 200px;
+}

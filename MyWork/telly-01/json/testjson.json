@@ -1,0 +1,8 @@
+{
+	"name":"telly",
+	"age":20,
+	"active":{
+		"eat":"apple",
+		"move":"bicy",
+	}
+}
