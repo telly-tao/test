@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>登录</title>
-		<script src="./js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			function submit(){
 				var obb=false;

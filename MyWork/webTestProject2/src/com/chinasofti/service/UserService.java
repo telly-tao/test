@@ -12,5 +12,9 @@ public interface UserService {
 
 	List<User> RequestList();
 
+	List<User> SerarchList(String username);
+
+	int countpage(String username);
+
 
 }

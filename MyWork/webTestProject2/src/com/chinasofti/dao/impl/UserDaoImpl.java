@@ -8,6 +8,7 @@ import com.chinasofti.dao.UserDao;
 import com.chinasofti.model.User;
 import com.chinasofti.util.DbUtil;
 import com.chinasofti.util.IDbUtil;
+import com.chinasofti.util.TurnPageUtil;
 
 public class UserDaoImpl implements UserDao {
 	@Override
@@ -83,5 +84,53 @@ public class UserDaoImpl implements UserDao {
 		}
 		db.closeQurey();
 		return list;
+	}
+	@Override
+	public List<User> SerarchList(String username) {
+		System.out.println("Serarchname:"+username);
+		IDbUtil db=new DbUtil();
+		List<User> userList=new ArrayList<User>();
+		int row=TurnPageUtil.row;
+		int begin=(TurnPageUtil.page-1)*TurnPageUtil.row;
+		System.out.println("begin:"+begin+",row:"+row);
+		String sql = "select * from tb_user where username like '%" + username + "%' limit "+begin+","+row+"";
+		System.out.println("sql:"+sql);
+		try {
+			ResultSet rs = db.query(sql);
+			while (rs.next()) {
+				User user = new User();
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
+				user.setSex(rs.getString("sex"));
+				user.setJg(rs.getString("jg"));
+				user.setLove(rs.getString("love"));
+				user.setJianjie(rs.getString("jianjie"));
+				userList.add(user);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.closeQurey();
+		}
+		System.out.println(userList);
+		return userList;
+	}
+	@Override
+	public int countpage(String username ) {
+		int count=0;
+		System.out.println("countname:"+username);
+		IDbUtil db=new DbUtil();
+		String sql = "select COUNT(*) AS count from tb_user where username like '%" + username + "%' ";
+		try {
+			ResultSet rs = db.query(sql);
+			while (rs.next()) {
+				count =rs.getInt("count");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			db.closeQurey();
+		}
+		return count;
 	}
 }

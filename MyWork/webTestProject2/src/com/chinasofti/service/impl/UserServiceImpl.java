@@ -7,6 +7,7 @@ import com.chinasofti.dao.UserDao;
 import com.chinasofti.dao.impl.UserDaoImpl;
 import com.chinasofti.model.User;
 import com.chinasofti.service.UserService;
+import com.chinasofti.util.TurnPageUtil;
 
 public class UserServiceImpl implements UserService {
 
@@ -36,6 +37,27 @@ public class UserServiceImpl implements UserService {
 			return null;
 		}
 
+	}
+
+	@Override
+	public List<User> SerarchList(String username) {
+		List<User> users=new ArrayList<User>();
+		UserDao userDao = new UserDaoImpl();
+		users=userDao.SerarchList(username);
+		return users;
+	}
+
+	@Override
+	public int countpage(String username ) {
+		int sumCount=1;
+		UserDao userDao = new UserDaoImpl();
+		int count=userDao.countpage(username);
+		if(count%TurnPageUtil.row==0) {
+			sumCount=count/TurnPageUtil.row;
+		}else {
+			sumCount=count/TurnPageUtil.row+1;
+		}
+		return sumCount;
 	}
 
 }

@@ -18,6 +18,8 @@ public class User {
 	private String jianjie;
 	
 	private String love;
+	
+	
 
 	public User() {
 	}
@@ -89,6 +91,8 @@ public class User {
 	public void setJianjie(String jianjie) {
 		this.jianjie = jianjie;
 	}
+	
+	
 
 	@Override
 	public String toString() {

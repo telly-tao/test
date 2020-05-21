@@ -12,4 +12,8 @@ public interface UserDao {
 
 	List<User> RequestList();
 
+	List<User> SerarchList(String username);
+
+	int countpage(String username);
+
 }

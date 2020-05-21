@@ -44,10 +44,13 @@ public class LoginUserSevlet extends HttpServlet {
 		UserService server=new UserServiceImpl();
 		User user=server.getUser(username,password);
 		if(user!=null) {
-			Cookie cookie=new Cookie("username", user.getUsername());
-			response.addCookie(cookie);
-			System.out.println("add cookie:"+cookie);
-			response.sendRedirect("home");
+//			Cookie cookie=new Cookie("username", user.getUsername());
+//			response.addCookie(cookie);
+//			System.out.println("add cookie:"+cookie);
+			System.out.println(" to home");
+			response.sendRedirect("search");
+
+			
 		}else {
 			response.sendRedirect("userjsp/index.jsp");
 		}

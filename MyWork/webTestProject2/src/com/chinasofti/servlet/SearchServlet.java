@@ -1,7 +1,6 @@
 package com.chinasofti.servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -13,23 +12,37 @@ import javax.servlet.http.HttpServletResponse;
 import com.chinasofti.model.User;
 import com.chinasofti.service.UserService;
 import com.chinasofti.service.impl.UserServiceImpl;
+import com.chinasofti.util.TurnPageUtil;
+@WebServlet("/search")
+public class SearchServlet extends HttpServlet {
 
-@WebServlet("/home")
-public class HomeUserSevlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doPost(request,response);
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doPost(req, resp);
 	}
 
+	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.setCharacterEncoding("Utf-8");
-		req.setCharacterEncoding("Utf-8");
+		String pg=req.getParameter("page");
+		if(pg!=null&&!pg.equals("")) {
+			TurnPageUtil.page=Integer.parseInt(pg);
+		}
+		String username=req.getParameter("username");
 		UserService server=new UserServiceImpl();
-		List<User> users=new ArrayList<User>();
-		users =server.RequestList();
+		List<User> users =server.SerarchList(username);
+		int count =server.countpage(username);
+		
+		System.out.println(users);
+		int page=TurnPageUtil.page;
+		
 		req.setAttribute("userlist", users);
+		req.setAttribute("searchname", username);
+		req.setAttribute("page",page);
+		req.setAttribute("count",count);
 		req.getRequestDispatcher("userjsp/home.jsp").forward(req, resp);
+
 	}
 
+	
 }
